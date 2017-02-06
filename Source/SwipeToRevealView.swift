@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 
+/// Swipe-to-reveal view
 public class SwipeToRevealView: UIView {
 
     override public init(frame: CGRect) {
@@ -15,6 +16,9 @@ public class SwipeToRevealView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    /// Close, so not extra content is revealed
+    ///
+    /// - Parameter animated: perform with animation
     public func close(animated: Bool) {
         horizontalOffset = closedOffset
         layoutIfNeeded(animated: animated)
@@ -22,6 +26,7 @@ public class SwipeToRevealView: UIView {
 
     // MARK: Subviews
 
+    /// Main view, displayed fully when no extra content is revealed
     public var contentView: UIView? {
         didSet {
             if let oldValue = oldValue {
@@ -34,6 +39,7 @@ public class SwipeToRevealView: UIView {
         }
     }
 
+    /// Right view, hidden by default, can be revelead with swipe gesture
     public var rightView: UIView? {
         didSet {
             if let oldValue = oldValue {
