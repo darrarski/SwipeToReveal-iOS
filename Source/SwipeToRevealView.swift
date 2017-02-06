@@ -1,9 +1,9 @@
 import UIKit
 import SnapKit
 
-class SwipeToRevealView: UIView {
+public class SwipeToRevealView: UIView {
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         loadSubviews()
         setupLayout()
@@ -11,18 +11,18 @@ class SwipeToRevealView: UIView {
     }
 
     @available(*, unavailable)
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func close(animated: Bool) {
+    public func close(animated: Bool) {
         horizontalOffset = closedOffset
         layoutIfNeeded(animated: animated)
     }
 
     // MARK: Subviews
 
-    var contentView: UIView? {
+    public var contentView: UIView? {
         didSet {
             if let oldValue = oldValue {
                 oldValue.removeFromSuperview()
@@ -34,7 +34,7 @@ class SwipeToRevealView: UIView {
         }
     }
 
-    var rightView: UIView? {
+    public var rightView: UIView? {
         didSet {
             if let oldValue = oldValue {
                 oldValue.removeFromSuperview()
@@ -170,12 +170,12 @@ class SwipeToRevealView: UIView {
 
 extension SwipeToRevealView: UIGestureRecognizerDelegate {
 
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
                            shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 
-    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let pgr = gestureRecognizer as? UIPanGestureRecognizer else { fatalError() }
         let velocity = pgr.velocity(in: self)
         return fabs(velocity.x) > fabs(velocity.y)
