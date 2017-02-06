@@ -23,19 +23,33 @@ class Cell: UITableViewCell {
         return label
     }()
 
+    let swipeToReveal = SwipeToRevealView(frame: .zero)
+
     private func loadSubviews() {
-        contentView.addSubview(label)
+        contentView.addSubview(swipeToReveal)
+        swipeToReveal.contentView = swipeContentView
+        swipeContentView.addSubview(label)
     }
+
+    private let swipeContentView: UIView = {
+        let view = UIView(frame: .zero)
+        view.layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        return view
+    }()
 
     // MARK: Layout
 
     private func setupLayout() {
+        swipeToReveal.snp.makeConstraints {
+            $0.edges.equalTo(0)
+        }
         label.snp.makeConstraints {
+            guard let superview = label.superview else { fatalError() }
             $0.centerYWithinMargins.equalTo(0)
-            $0.topMargin.greaterThanOrEqualTo(0)
-            $0.leftMargin.equalTo(0)
-            $0.rightMargin.lessThanOrEqualTo(0)
-            $0.bottomMargin.lessThanOrEqualTo(0)
+            $0.top.greaterThanOrEqualTo(superview.snp.topMargin)
+            $0.left.equalTo(superview.snp.leftMargin)
+            $0.right.lessThanOrEqualTo(superview.snp.rightMargin)
+            $0.bottom.lessThanOrEqualTo(superview.snp.bottomMargin)
         }
     }
 
