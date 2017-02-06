@@ -128,37 +128,41 @@ class SwipeToRevealView: UIView {
         switch pgr.state {
         case .possible: break
         case .began:
-            pan = Pan(point: pgr.translation(in: self).x, offset: horizontalOffset)
-
+            handlePanBegan(point: pgr.translation(in: self).x)
         case .changed:
-            pan?.currentPoint = pgr.translation(in: self).x
-
-            guard let pan = pan else { return }
-
-            let targetOffset = pan.startOffset + pan.delta
-            horizontalOffset = max(rightRevealedOffset, min(closedOffset, targetOffset))
-
-        case .ended:
-            guard let pan = pan else { return }
-
-            if pan.lastDelta > 0 {
-                horizontalOffset = closedOffset
-            } else {
-                horizontalOffset = rightRevealedOffset
-            }
-
-            layoutIfNeeded(animated: true)
-
-            self.pan = nil
-
-        case .cancelled, .failed:
-            pan = nil
+            handlePanChanged(point: pgr.translation(in: self).x)
+        case .ended, .cancelled, .failed:
+            handlePanEnded()
         }
     }
 
-    let closedOffset = CGFloat(0)
+    private func handlePanBegan(point: CGFloat) {
+        pan = Pan(point: point, offset: horizontalOffset)
+    }
 
-    var rightRevealedOffset: CGFloat {
+    private func handlePanChanged(point: CGFloat) {
+        pan?.currentPoint = point
+        guard let pan = pan else { return }
+        let targetOffset = pan.startOffset + pan.delta
+        horizontalOffset = max(rightRevealedOffset, min(closedOffset, targetOffset))
+    }
+
+    private func handlePanEnded() {
+        guard let pan = pan else { return }
+
+        if pan.lastDelta > 0 {
+            horizontalOffset = closedOffset
+        } else {
+            horizontalOffset = rightRevealedOffset
+        }
+
+        layoutIfNeeded(animated: true)
+        self.pan = nil
+    }
+
+    private let closedOffset = CGFloat(0)
+
+    private var rightRevealedOffset: CGFloat {
         return -rightContainer.frame.width
     }
 
