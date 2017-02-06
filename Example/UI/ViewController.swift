@@ -1,9 +1,9 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .plain)
     }
 
     @available(*, unavailable)
@@ -11,9 +11,39 @@ class ViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func loadView() {
-        super.loadView()
-        view.backgroundColor = .white
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+
+    // MARK: UITableViewDataSource
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0: return 100
+        default: fatalError()
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Cell \(indexPath.row + 1)"
+        return cell
+    }
+
+    // MARK: UITableViewDelegate
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (0, _):
+            return 88
+        default:
+            fatalError()
+        }
     }
 
 }
