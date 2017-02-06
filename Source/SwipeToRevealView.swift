@@ -7,11 +7,17 @@ class SwipeToRevealView: UIView {
         super.init(frame: frame)
         loadSubviews()
         setupLayout()
+        setupGestureRecognizing()
     }
 
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func close(animated: Bool) {
+        horizontalOffset = closedOffset
+        layoutIfNeeded(animated: animated)
     }
 
     // MARK: Subviews
@@ -55,7 +61,7 @@ class SwipeToRevealView: UIView {
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview()
             $0.size.equalToSuperview()
-            horizontalOffsetConstraint = $0.left.equalToSuperview().constraint
+            $0.left.equalTo(horizontalOffset)
         }
         rightContainer.snp.makeConstraints {
             $0.top.equalTo(centerContainer.snp.top)
@@ -64,6 +70,105 @@ class SwipeToRevealView: UIView {
         }
     }
 
-    private var horizontalOffsetConstraint: Constraint?
+    private var horizontalOffset = CGFloat(0) {
+        didSet { centerContainer.snp.updateConstraints { $0.left.equalTo(horizontalOffset) } }
+    }
+
+    private func layoutIfNeeded(animated: Bool) {
+        guard animated else {
+            super.layoutIfNeeded()
+            return
+        }
+
+        UIView.animate(withDuration: 0.1,
+                       delay: 0,
+                       options: UIViewAnimationOptions.curveEaseOut,
+                       animations: { [weak self] in self?.layoutIfNeeded() })
+    }
+
+    // MARK: Gesture recognizing
+
+    private func setupGestureRecognizing() {
+        panGeastureRecognizer.delegate = self
+        panGeastureRecognizer.addTarget(self, action: #selector(self.panGestureRecognizerUpdate(_:)))
+        addGestureRecognizer(panGeastureRecognizer)
+    }
+
+    private let panGeastureRecognizer = UIPanGestureRecognizer()
+
+    private struct Pan {
+        let startPoint: CGFloat
+        let startOffset: CGFloat
+
+        var currentPoint: CGFloat {
+            didSet { previousPoint = oldValue }
+        }
+
+        private var previousPoint: CGFloat
+
+        var lastDelta: CGFloat {
+            return currentPoint - previousPoint
+        }
+
+        var delta: CGFloat {
+            return currentPoint - startPoint
+        }
+
+        init(point: CGFloat, offset: CGFloat) {
+            self.startPoint = point
+            self.startOffset = offset
+            self.currentPoint = point
+            self.previousPoint = point
+        }
+    }
+
+    private var pan: Pan?
+
+    func panGestureRecognizerUpdate(_ pgr: UIPanGestureRecognizer) {
+        switch pgr.state {
+        case .possible: break
+        case .began:
+            pan = Pan(point: pgr.translation(in: self).x, offset: horizontalOffset)
+
+        case .changed:
+            pan?.currentPoint = pgr.translation(in: self).x
+
+            guard let pan = pan else { return }
+
+            let targetOffset = pan.startOffset + pan.delta
+            horizontalOffset = max(rightRevealedOffset, min(closedOffset, targetOffset))
+
+        case .ended:
+            guard let pan = pan else { return }
+
+            if pan.lastDelta > 0 {
+                horizontalOffset = closedOffset
+            } else {
+                horizontalOffset = rightRevealedOffset
+            }
+
+            layoutIfNeeded(animated: true)
+
+            self.pan = nil
+
+        case .cancelled, .failed:
+            pan = nil
+        }
+    }
+
+    let closedOffset = CGFloat(0)
+
+    var rightRevealedOffset: CGFloat {
+        return -rightContainer.frame.width
+    }
+
+}
+
+extension SwipeToRevealView: UIGestureRecognizerDelegate {
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 
 }
