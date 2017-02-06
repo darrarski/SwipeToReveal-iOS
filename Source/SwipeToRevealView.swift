@@ -171,7 +171,8 @@ public class SwipeToRevealView: UIView {
 extension SwipeToRevealView: UIGestureRecognizerDelegate {
 
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+                                  shouldRecognizeSimultaneouslyWith
+                                  otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 
