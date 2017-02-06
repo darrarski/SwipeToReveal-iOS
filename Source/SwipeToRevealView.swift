@@ -175,4 +175,10 @@ extension SwipeToRevealView: UIGestureRecognizerDelegate {
         return true
     }
 
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard let pgr = gestureRecognizer as? UIPanGestureRecognizer else { fatalError() }
+        let velocity = pgr.velocity(in: self)
+        return fabs(velocity.x) > fabs(velocity.y)
+    }
+
 }
