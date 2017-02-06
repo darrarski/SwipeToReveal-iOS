@@ -14,6 +14,12 @@ class Cell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = nil
+        swipeToReveal.close(animated: false)
+    }
+
     // MARK: Subviews
 
     let label = Factory.label
