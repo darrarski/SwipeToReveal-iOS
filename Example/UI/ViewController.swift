@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(Cell.self, forCellReuseIdentifier: "cell")
     }
 
     // MARK: UITableViewDataSource
@@ -30,8 +30,10 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Cell \(indexPath.row + 1)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {
+            fatalError()
+        }
+        cell.label.text = "Cell \(indexPath.row + 1)"
         return cell
     }
 
