@@ -103,7 +103,6 @@
 			children = (
 				314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */,
 			);
-			name = Source;
 			path = Source;
 			sourceTree = "<group>";
 		};
@@ -132,6 +131,7 @@
 			buildConfigurationList = 314A559C1E48E1CC00DD410B /* Build configuration list for PBXNativeTarget "SwipeToRevealExample" */;
 			buildPhases = (
 				AA4CD1C2AB847AF1BB96EF69 /* [CP] Check Pods Manifest.lock */,
+				318C5D7F1E49258900F41A97 /* SwiftLint */,
 				314A55861E48E1CC00DD410B /* Sources */,
 				314A55871E48E1CC00DD410B /* Frameworks */,
 				314A55881E48E1CC00DD410B /* Resources */,
@@ -208,6 +208,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwipeToRevealExample/Pods-SwipeToRevealExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		318C5D7F1E49258900F41A97 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		AA4CD1C2AB847AF1BB96EF69 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

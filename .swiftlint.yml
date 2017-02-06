@@ -1,0 +1,19 @@
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - private_outlet
+  - redundant_nil_coalesing
+
+excluded:
+  - Pods
+
+line_length: 
+  warning: 120
+  error: 200
+
+variable_name:
+  excluded:
+    - id
+    - URL
+    - to
+    - rx
