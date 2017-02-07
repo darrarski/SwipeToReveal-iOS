@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source                = { :git => 'https://github.com/darrarski/SwipeToReveal-iOS.git', 
                               :tag => "v#{s.version}" }
   s.platform              = :ios
-  s.ios.deployment_target = '10.2'
+  s.ios.deployment_target = '10.0'
   s.source_files          = 'Source'
   s.requires_arc          = true
   s.frameworks            = 'UIKit'
