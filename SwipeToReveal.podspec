@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'SwipeToReveal'
-  s.version               = '0.0.2'
+  s.version               = '1.0.0'
   s.summary               = 'Customizable swipe-to-reveal view for iOS apps'
   s.homepage              = 'https://github.com/darrarski/SwipeToReveal-iOS'
   s.author                = { 'Dariusz Rybicki' => 'darrarski@gmail.com' }
