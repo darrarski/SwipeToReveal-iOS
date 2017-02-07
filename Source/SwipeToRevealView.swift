@@ -4,6 +4,9 @@ import SnapKit
 /// Swipe-to-reveal view
 public class SwipeToRevealView: UIView {
 
+    /// Create SwipeToRevealView
+    ///
+    /// - Parameter frame: frame
     override public init(frame: CGRect) {
         super.init(frame: frame)
         loadSubviews()
@@ -20,7 +23,15 @@ public class SwipeToRevealView: UIView {
     ///
     /// - Parameter animated: perform with animation
     public func close(animated: Bool) {
-        horizontalOffset = closedOffset
+        contentOffset = closedOffset
+        layoutIfNeeded(animated: animated)
+    }
+
+    /// Reveal right view
+    ///
+    /// - Parameter animated: perform with animation
+    public func revealRight(animated: Bool) {
+        contentOffset = rightRevealedOffset
         layoutIfNeeded(animated: animated)
     }
 
@@ -62,22 +73,31 @@ public class SwipeToRevealView: UIView {
 
     // MARK: Layout
 
+    /// Content offset - changes when swiping
+    public var contentOffset = CGFloat(0) {
+        didSet { centerContainer.snp.updateConstraints { $0.left.equalTo(contentOffset) } }
+    }
+
+    /// Value for content offset in default state
+    public let closedOffset = CGFloat(0)
+
+    /// Value for content offset when right view is fully revealed
+    public var rightRevealedOffset: CGFloat {
+        return -rightContainer.frame.width
+    }
+
     private func setupLayout() {
         centerContainer.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview()
             $0.size.equalToSuperview()
-            $0.left.equalTo(horizontalOffset)
+            $0.left.equalTo(contentOffset)
         }
         rightContainer.snp.makeConstraints {
             $0.top.equalTo(centerContainer.snp.top)
             $0.left.equalTo(centerContainer.snp.right)
             $0.bottom.equalTo(centerContainer.snp.bottom)
         }
-    }
-
-    private var horizontalOffset = CGFloat(0) {
-        didSet { centerContainer.snp.updateConstraints { $0.left.equalTo(horizontalOffset) } }
     }
 
     private func layoutIfNeeded(animated: Bool) {
@@ -143,33 +163,27 @@ public class SwipeToRevealView: UIView {
     }
 
     private func handlePanBegan(point: CGFloat) {
-        pan = Pan(point: point, offset: horizontalOffset)
+        pan = Pan(point: point, offset: contentOffset)
     }
 
     private func handlePanChanged(point: CGFloat) {
         pan?.currentPoint = point
         guard let pan = pan else { return }
         let targetOffset = pan.startOffset + pan.delta
-        horizontalOffset = max(rightRevealedOffset, min(closedOffset, targetOffset))
+        contentOffset = max(rightRevealedOffset, min(closedOffset, targetOffset))
     }
 
     private func handlePanEnded() {
         guard let pan = pan else { return }
 
         if pan.lastDelta > 0 {
-            horizontalOffset = closedOffset
+            contentOffset = closedOffset
         } else {
-            horizontalOffset = rightRevealedOffset
+            contentOffset = rightRevealedOffset
         }
 
         layoutIfNeeded(animated: true)
         self.pan = nil
-    }
-
-    private let closedOffset = CGFloat(0)
-
-    private var rightRevealedOffset: CGFloat {
-        return -rightContainer.frame.width
     }
 
 }
