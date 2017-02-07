@@ -106,9 +106,9 @@ public class SwipeToRevealView: UIView {
             return
         }
 
-        UIView.animate(withDuration: 0.1,
+        UIView.animate(withDuration: 0.2,
                        delay: 0,
-                       options: UIViewAnimationOptions.curveEaseOut,
+                       options: UIViewAnimationOptions.curveEaseInOut,
                        animations: { [weak self] in self?.layoutIfNeeded() })
     }
 
