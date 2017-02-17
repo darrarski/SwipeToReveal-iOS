@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A558D1E48E1CC00DD410B /* AppDelegate.swift */; };
-		314A55901E48E1CC00DD410B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A558F1E48E1CC00DD410B /* ViewController.swift */; };
+		314A55901E48E1CC00DD410B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A558F1E48E1CC00DD410B /* TableViewController.swift */; };
 		314A55951E48E1CC00DD410B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A55941E48E1CC00DD410B /* Assets.xcassets */; };
 		314A55981E48E1CC00DD410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */; };
-		314A55A31E48E8BA00DD410B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A21E48E8BA00DD410B /* Cell.swift */; };
+		314A55A31E48E8BA00DD410B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A21E48E8BA00DD410B /* TableViewCell.swift */; };
 		314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */; };
 		7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */; };
 /* End PBXBuildFile section */
@@ -20,11 +20,11 @@
 		1EBACFF15A65C0ED772D25B3 /* Pods-SwipeToRevealExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExample/Pods-SwipeToRevealExample.release.xcconfig"; sourceTree = "<group>"; };
 		314A558A1E48E1CC00DD410B /* SwipeToRevealExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeToRevealExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A558D1E48E1CC00DD410B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		314A558F1E48E1CC00DD410B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		314A558F1E48E1CC00DD410B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		314A55941E48E1CC00DD410B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		314A55971E48E1CC00DD410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		314A55991E48E1CC00DD410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		314A55A21E48E8BA00DD410B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		314A55A21E48E8BA00DD410B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeToRevealView.swift; sourceTree = "<group>"; };
 		53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965BBCD85442586E700FFB28 /* Pods-SwipeToRevealExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExample/Pods-SwipeToRevealExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,9 +91,8 @@
 		314A55A11E48E37A00DD410B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				314A55A21E48E8BA00DD410B /* Cell.swift */,
+				31A076831E57C0F600D82BD7 /* TableView */,
 				314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */,
-				314A558F1E48E1CC00DD410B /* ViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -104,6 +103,16 @@
 				314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		31A076831E57C0F600D82BD7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				314A55A21E48E8BA00DD410B /* TableViewCell.swift */,
+				314A558F1E48E1CC00DD410B /* TableViewController.swift */,
+			);
+			name = TableView;
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		BCB2B849A7B008448623F7A5 /* Pods */ = {
@@ -260,9 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				314A55901E48E1CC00DD410B /* ViewController.swift in Sources */,
+				314A55901E48E1CC00DD410B /* TableViewController.swift in Sources */,
 				314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */,
-				314A55A31E48E8BA00DD410B /* Cell.swift in Sources */,
+				314A55A31E48E8BA00DD410B /* TableViewCell.swift in Sources */,
 				314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

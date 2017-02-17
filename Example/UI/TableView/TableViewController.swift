@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UITableViewController {
+class TableViewController: UITableViewController {
 
     init() {
         super.init(style: .plain)
@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(Cell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
     // MARK: UITableViewDataSource
@@ -30,7 +30,7 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell else {
             fatalError()
         }
         cell.label.text = "Cell \(indexPath.row + 1)"

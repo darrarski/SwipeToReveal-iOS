@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class Cell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -64,7 +64,7 @@ class Cell: UITableViewCell {
 
 }
 
-private extension Cell {
+private extension TableViewCell {
     struct Factory {
 
         static var label: UILabel {
