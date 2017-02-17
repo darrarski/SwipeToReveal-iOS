@@ -8,3 +8,8 @@ target 'SwipeToRevealExample' do
   pod 'SnapKit', '~> 3.0'
   pod 'SwiftLint', '~> 0.16'
 end
+
+target 'SwipeToRevealExampleTests' do
+  pod 'Quick', '~> 1.1'
+  pod 'Nimble', '~> 6.0'
+end
