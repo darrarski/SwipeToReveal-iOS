@@ -13,6 +13,9 @@
 		314A55981E48E1CC00DD410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */; };
 		314A55A31E48E8BA00DD410B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A21E48E8BA00DD410B /* TableViewCell.swift */; };
 		314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */; };
+		31A076851E57C2FB00D82BD7 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076841E57C2FB00D82BD7 /* Container.swift */; };
+		31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */; };
+		31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */; };
 		7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		314A55991E48E1CC00DD410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		314A55A21E48E8BA00DD410B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeToRevealView.swift; sourceTree = "<group>"; };
+		31A076841E57C2FB00D82BD7 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateAssembly.swift; sourceTree = "<group>"; };
+		31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_AppDelegateAssembly.swift; sourceTree = "<group>"; };
 		53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965BBCD85442586E700FFB28 /* Pods-SwipeToRevealExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExample/Pods-SwipeToRevealExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				314A558D1E48E1CC00DD410B /* AppDelegate.swift */,
+				31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */,
+				31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */,
+				31A076841E57C2FB00D82BD7 /* Container.swift */,
 				314A55991E48E1CC00DD410B /* Info.plist */,
 			);
 			path = Application;
@@ -111,7 +120,6 @@
 				314A55A21E48E8BA00DD410B /* TableViewCell.swift */,
 				314A558F1E48E1CC00DD410B /* TableViewController.swift */,
 			);
-			name = TableView;
 			path = TableView;
 			sourceTree = "<group>";
 		};
@@ -270,7 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				314A55901E48E1CC00DD410B /* TableViewController.swift in Sources */,
+				31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */,
 				314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */,
+				31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */,
+				31A076851E57C2FB00D82BD7 /* Container.swift in Sources */,
 				314A55A31E48E8BA00DD410B /* TableViewCell.swift in Sources */,
 				314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */,
 			);
