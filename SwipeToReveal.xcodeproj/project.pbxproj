@@ -122,10 +122,8 @@
 		314A559F1E48E36500DD410B /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				314A558D1E48E1CC00DD410B /* AppDelegate.swift */,
-				31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */,
+				31A076B21E57D6D000D82BD7 /* Delegate */,
 				31A076841E57C2FB00D82BD7 /* Container.swift */,
-				31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */,
 				314A55991E48E1CC00DD410B /* Info.plist */,
 			);
 			path = Application;
@@ -195,6 +193,17 @@
 				31A076AE1E57D28000D82BD7 /* MenuViewController.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		31A076B21E57D6D000D82BD7 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				314A558D1E48E1CC00DD410B /* AppDelegate.swift */,
+				31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */,
+				31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */,
+			);
+			name = Delegate;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		BCB2B849A7B008448623F7A5 /* Pods */ = {
