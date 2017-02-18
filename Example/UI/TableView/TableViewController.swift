@@ -2,7 +2,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    init() {
+    init(assembly: TableViewAssembly) {
+        self.assembly = assembly
         super.init(style: .plain)
     }
 
@@ -47,5 +48,9 @@ class TableViewController: UITableViewController {
             fatalError()
         }
     }
+
+    // MARK: Private
+
+    private let assembly: TableViewAssembly
 
 }
