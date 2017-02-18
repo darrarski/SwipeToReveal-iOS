@@ -10,6 +10,10 @@ extension Container {
                 return UIWindow(frame: UIScreen.main.bounds)
             }
 
+            var navigationController: UINavigationController {
+                return UINavigationController()
+            }
+
             var rootViewController: UIViewController {
                 return TableViewExampleController(assembly: container.tableViewExampleAssembly)
             }

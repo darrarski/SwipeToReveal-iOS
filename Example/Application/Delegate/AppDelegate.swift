@@ -22,7 +22,9 @@ extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = assembly.window
-        window?.rootViewController = assembly.rootViewController
+        let navigationController = assembly.navigationController
+        navigationController.viewControllers = [assembly.rootViewController]
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true
     }

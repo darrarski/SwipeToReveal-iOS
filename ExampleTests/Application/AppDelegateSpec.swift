@@ -29,8 +29,20 @@ class AppDelegateSpec: QuickSpec {
                     expect(assembly.windowSpy.makeKeyAndVisibleCalled).to(beTrue())
                 }
 
-                it("should have correct root view controller") {
-                    expect(sut.window?.rootViewController).to(equal(assembly.rootViewController))
+                describe("root navigation controller") {
+                    var controller: UINavigationController!
+
+                    beforeEach {
+                        controller = sut.window?.rootViewController as? UINavigationController
+                    }
+
+                    it("should be correct") {
+                        expect(controller).to(equal(assembly.navigationController))
+                    }
+
+                    it("should have correct root") {
+                        expect(controller.viewControllers.first).to(equal(assembly.rootViewController))
+                    }
                 }
             }
         }
@@ -39,6 +51,7 @@ class AppDelegateSpec: QuickSpec {
     struct Assembly: AppDelegateAssembly {
         let windowSpy = WindowSpy(frame: .zero)
         var window: UIWindow { return windowSpy }
+        let navigationController = UINavigationController()
         let rootViewController = UIViewController(nibName: nil, bundle: nil)
     }
 
