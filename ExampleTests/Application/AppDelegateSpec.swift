@@ -28,6 +28,10 @@ class AppDelegateSpec: QuickSpec {
                 it("should make window key and visible") {
                     expect(assembly.windowSpy.makeKeyAndVisibleCalled).to(beTrue())
                 }
+
+                it("should have correct root view controller") {
+                    expect(sut.window?.rootViewController).to(equal(assembly.rootViewController))
+                }
             }
         }
     }
@@ -35,6 +39,7 @@ class AppDelegateSpec: QuickSpec {
     struct Assembly: AppDelegateAssembly {
         let windowSpy = WindowSpy(frame: .zero)
         var window: UIWindow { return windowSpy }
+        let rootViewController = UIViewController(nibName: nil, bundle: nil)
     }
 
 }
