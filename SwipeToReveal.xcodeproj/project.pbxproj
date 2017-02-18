@@ -22,6 +22,9 @@
 		31A076A31E57CD8A00D82BD7 /* WindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A11E57CD6900D82BD7 /* WindowSpy.swift */; };
 		31A076A81E57CEA400D82BD7 /* TableViewExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A71E57CEA400D82BD7 /* TableViewExampleAssembly.swift */; };
 		31A076AA1E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A91E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift */; };
+		31A076AD1E57D27700D82BD7 /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076AC1E57D27700D82BD7 /* MenuAssembly.swift */; };
+		31A076AF1E57D28000D82BD7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076AE1E57D28000D82BD7 /* MenuViewController.swift */; };
+		31A076B11E57D29000D82BD7 /* Container_MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076B01E57D29000D82BD7 /* Container_MenuAssembly.swift */; };
 		7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		31A076A11E57CD6900D82BD7 /* WindowSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
 		31A076A71E57CEA400D82BD7 /* TableViewExampleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExampleAssembly.swift; sourceTree = "<group>"; };
 		31A076A91E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_TableViewExampleAssembly.swift; sourceTree = "<group>"; };
+		31A076AC1E57D27700D82BD7 /* MenuAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
+		31A076AE1E57D28000D82BD7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		31A076B01E57D29000D82BD7 /* Container_MenuAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_MenuAssembly.swift; sourceTree = "<group>"; };
 		42DF1915B99875D21FA7B4DA /* Pods_SwipeToRevealExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4979947EEC3481468A09BD /* Pods-SwipeToRevealExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExampleTests/Pods-SwipeToRevealExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 		314A55A11E48E37A00DD410B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				31A076AB1E57D26E00D82BD7 /* Menu */,
 				31A076831E57C0F600D82BD7 /* TableViewExample */,
 				314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */,
 			);
@@ -178,6 +185,16 @@
 				31A076A11E57CD6900D82BD7 /* WindowSpy.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		31A076AB1E57D26E00D82BD7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				31A076B01E57D29000D82BD7 /* Container_MenuAssembly.swift */,
+				31A076AC1E57D27700D82BD7 /* MenuAssembly.swift */,
+				31A076AE1E57D28000D82BD7 /* MenuViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		BCB2B849A7B008448623F7A5 /* Pods */ = {
@@ -420,8 +437,11 @@
 				31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */,
 				314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */,
 				31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */,
+				31A076AF1E57D28000D82BD7 /* MenuViewController.swift in Sources */,
 				31A076AA1E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift in Sources */,
+				31A076B11E57D29000D82BD7 /* Container_MenuAssembly.swift in Sources */,
 				31A076851E57C2FB00D82BD7 /* Container.swift in Sources */,
+				31A076AD1E57D27700D82BD7 /* MenuAssembly.swift in Sources */,
 				31A076A81E57CEA400D82BD7 /* TableViewExampleAssembly.swift in Sources */,
 				314A55A31E48E8BA00DD410B /* TableViewExampleCell.swift in Sources */,
 				314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */,
