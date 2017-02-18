@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		310FC2CA9FD77D1D1EBAC032 /* Pods_SwipeToRevealExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DF1915B99875D21FA7B4DA /* Pods_SwipeToRevealExampleTests.framework */; };
 		314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A558D1E48E1CC00DD410B /* AppDelegate.swift */; };
-		314A55901E48E1CC00DD410B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A558F1E48E1CC00DD410B /* TableViewController.swift */; };
+		314A55901E48E1CC00DD410B /* TableViewExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A558F1E48E1CC00DD410B /* TableViewExampleController.swift */; };
 		314A55951E48E1CC00DD410B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A55941E48E1CC00DD410B /* Assets.xcassets */; };
 		314A55981E48E1CC00DD410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */; };
-		314A55A31E48E8BA00DD410B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A21E48E8BA00DD410B /* TableViewCell.swift */; };
+		314A55A31E48E8BA00DD410B /* TableViewExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A21E48E8BA00DD410B /* TableViewExampleCell.swift */; };
 		314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */; };
 		31A076851E57C2FB00D82BD7 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076841E57C2FB00D82BD7 /* Container.swift */; };
 		31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */; };
@@ -20,8 +20,8 @@
 		31A076911E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076901E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift */; };
 		31A076981E57C6E100D82BD7 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */; };
 		31A076A31E57CD8A00D82BD7 /* WindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A11E57CD6900D82BD7 /* WindowSpy.swift */; };
-		31A076A81E57CEA400D82BD7 /* TableViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A71E57CEA400D82BD7 /* TableViewAssembly.swift */; };
-		31A076AA1E57CEB200D82BD7 /* Container_TableViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A91E57CEB200D82BD7 /* Container_TableViewAssembly.swift */; };
+		31A076A81E57CEA400D82BD7 /* TableViewExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A71E57CEA400D82BD7 /* TableViewExampleAssembly.swift */; };
+		31A076AA1E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A91E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift */; };
 		7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +39,11 @@
 		1EBACFF15A65C0ED772D25B3 /* Pods-SwipeToRevealExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExample/Pods-SwipeToRevealExample.release.xcconfig"; sourceTree = "<group>"; };
 		314A558A1E48E1CC00DD410B /* SwipeToRevealExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeToRevealExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A558D1E48E1CC00DD410B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		314A558F1E48E1CC00DD410B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		314A558F1E48E1CC00DD410B /* TableViewExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExampleController.swift; sourceTree = "<group>"; };
 		314A55941E48E1CC00DD410B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		314A55971E48E1CC00DD410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		314A55991E48E1CC00DD410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		314A55A21E48E8BA00DD410B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		314A55A21E48E8BA00DD410B /* TableViewExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExampleCell.swift; sourceTree = "<group>"; };
 		314A55A51E48EA8D00DD410B /* SwipeToRevealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeToRevealView.swift; sourceTree = "<group>"; };
 		31A076841E57C2FB00D82BD7 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateAssembly.swift; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		31A076921E57C48A00D82BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		31A076A11E57CD6900D82BD7 /* WindowSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
-		31A076A71E57CEA400D82BD7 /* TableViewAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAssembly.swift; sourceTree = "<group>"; };
-		31A076A91E57CEB200D82BD7 /* Container_TableViewAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_TableViewAssembly.swift; sourceTree = "<group>"; };
+		31A076A71E57CEA400D82BD7 /* TableViewExampleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExampleAssembly.swift; sourceTree = "<group>"; };
+		31A076A91E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_TableViewExampleAssembly.swift; sourceTree = "<group>"; };
 		42DF1915B99875D21FA7B4DA /* Pods_SwipeToRevealExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4979947EEC3481468A09BD /* Pods-SwipeToRevealExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExampleTests/Pods-SwipeToRevealExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		314A55A11E48E37A00DD410B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				31A076831E57C0F600D82BD7 /* TableView */,
+				31A076831E57C0F600D82BD7 /* TableViewExample */,
 				314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */,
 			);
 			path = UI;
@@ -150,15 +150,15 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		31A076831E57C0F600D82BD7 /* TableView */ = {
+		31A076831E57C0F600D82BD7 /* TableViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				31A076A91E57CEB200D82BD7 /* Container_TableViewAssembly.swift */,
-				31A076A71E57CEA400D82BD7 /* TableViewAssembly.swift */,
-				314A55A21E48E8BA00DD410B /* TableViewCell.swift */,
-				314A558F1E48E1CC00DD410B /* TableViewController.swift */,
+				31A076A91E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift */,
+				31A076A71E57CEA400D82BD7 /* TableViewExampleAssembly.swift */,
+				314A55A21E48E8BA00DD410B /* TableViewExampleCell.swift */,
+				314A558F1E48E1CC00DD410B /* TableViewExampleController.swift */,
 			);
-			path = TableView;
+			path = TableViewExample;
 			sourceTree = "<group>";
 		};
 		31A0768F1E57C48A00D82BD7 /* ExampleTests */ = {
@@ -416,14 +416,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				314A55901E48E1CC00DD410B /* TableViewController.swift in Sources */,
+				314A55901E48E1CC00DD410B /* TableViewExampleController.swift in Sources */,
 				31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */,
 				314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */,
 				31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */,
-				31A076AA1E57CEB200D82BD7 /* Container_TableViewAssembly.swift in Sources */,
+				31A076AA1E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift in Sources */,
 				31A076851E57C2FB00D82BD7 /* Container.swift in Sources */,
-				31A076A81E57CEA400D82BD7 /* TableViewAssembly.swift in Sources */,
-				314A55A31E48E8BA00DD410B /* TableViewCell.swift in Sources */,
+				31A076A81E57CEA400D82BD7 /* TableViewExampleAssembly.swift in Sources */,
+				314A55A31E48E8BA00DD410B /* TableViewExampleCell.swift in Sources */,
 				314A55A61E48EA8D00DD410B /* SwipeToRevealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

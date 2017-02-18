@@ -8,7 +8,7 @@ extension Container {
 
             var window: UIWindow {
                 let window = UIWindow(frame: UIScreen.main.bounds)
-                window.rootViewController = TableViewController(assembly: container.tableViewAssembly)
+                window.rootViewController = TableViewExampleController(assembly: container.tableViewExampleAssembly)
                 return window
             }
 
