@@ -18,6 +18,8 @@
 		31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */; };
 		31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */; };
 		31A076911E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076901E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift */; };
+		31A076981E57C6E100D82BD7 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */; };
+		31A076A31E57CD8A00D82BD7 /* WindowSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076A11E57CD6900D82BD7 /* WindowSpy.swift */; };
 		7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		31A0768E1E57C48A00D82BD7 /* SwipeToRevealExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeToRevealExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A076901E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToRevealExampleTests.swift; sourceTree = "<group>"; };
 		31A076921E57C48A00D82BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
+		31A076A11E57CD6900D82BD7 /* WindowSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
 		42DF1915B99875D21FA7B4DA /* Pods_SwipeToRevealExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeToRevealExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4979947EEC3481468A09BD /* Pods-SwipeToRevealExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExampleTests/Pods-SwipeToRevealExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,10 +158,21 @@
 		31A0768F1E57C48A00D82BD7 /* ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				31A076A51E57CDB700D82BD7 /* Application */,
 				31A076921E57C48A00D82BD7 /* Info.plist */,
 				31A076901E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift */,
 			);
 			path = ExampleTests;
+			sourceTree = "<group>";
+		};
+		31A076A51E57CDB700D82BD7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */,
+				31A076A11E57CD6900D82BD7 /* WindowSpy.swift */,
+			);
+			name = Application;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		BCB2B849A7B008448623F7A5 /* Pods */ = {
@@ -411,6 +426,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A076911E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift in Sources */,
+				31A076981E57C6E100D82BD7 /* AppDelegateSpec.swift in Sources */,
+				31A076A31E57CD8A00D82BD7 /* WindowSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
