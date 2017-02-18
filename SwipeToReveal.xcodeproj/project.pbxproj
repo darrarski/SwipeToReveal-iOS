@@ -21,6 +21,16 @@
 		7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EFD90C736845F0F5D16D61 /* Pods_SwipeToRevealExample.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		31A0769F1E57C8D900D82BD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 314A55821E48E1CC00DD410B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 314A55891E48E1CC00DD410B;
+			remoteInfo = SwipeToRevealExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1EBACFF15A65C0ED772D25B3 /* Pods-SwipeToRevealExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeToRevealExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeToRevealExample/Pods-SwipeToRevealExample.release.xcconfig"; sourceTree = "<group>"; };
 		314A558A1E48E1CC00DD410B /* SwipeToRevealExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeToRevealExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				31A076A01E57C8D900D82BD7 /* PBXTargetDependency */,
 			);
 			name = SwipeToRevealExampleTests;
 			productName = SwipeToRevealExampleTests;
@@ -231,6 +242,7 @@
 					31A0768D1E57C48A00D82BD7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Manual;
+						TestTargetID = 314A55891E48E1CC00DD410B;
 					};
 				};
 			};
@@ -404,6 +416,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		31A076A01E57C8D900D82BD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 314A55891E48E1CC00DD410B /* SwipeToRevealExample */;
+			targetProxy = 31A0769F1E57C8D900D82BD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -541,12 +561,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B4979947EEC3481468A09BD /* Pods-SwipeToRevealExampleTests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SwipeToRevealExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeToRevealExample.app/SwipeToRevealExample";
 			};
 			name = Debug;
 		};
@@ -554,12 +576,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F736ACAA48911E20D6BD4B89 /* Pods-SwipeToRevealExampleTests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SwipeToRevealExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeToRevealExample.app/SwipeToRevealExample";
 			};
 			name = Release;
 		};
