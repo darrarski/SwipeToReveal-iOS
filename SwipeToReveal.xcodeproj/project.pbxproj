@@ -147,7 +147,6 @@
 				31A076921E57C48A00D82BD7 /* Info.plist */,
 				31A076901E57C48A00D82BD7 /* SwipeToRevealExampleTests.swift */,
 			);
-			name = ExampleTests;
 			path = ExampleTests;
 			sourceTree = "<group>";
 		};
@@ -544,11 +543,9 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SwipeToRevealExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -559,7 +556,6 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SwipeToRevealExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -595,6 +591,7 @@
 				31A076951E57C48A00D82BD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
