@@ -76,9 +76,12 @@ class MenuViewControllerSpec: QuickSpec {
 
     struct Assembly: MenuAssembly {
         let viewModel: MenuViewModel
+        var tableViewExampleController: UIViewController { fatalError() }
     }
 
-    struct ViewModel: MenuViewModel {
+    class ViewModel: MenuViewModel {
+        weak var delegate: MenuViewModelDelegate?
+
         let title = "Menu Title"
 
         var items: [MenuItemViewModel] {
@@ -96,6 +99,8 @@ class MenuViewControllerSpec: QuickSpec {
         init(title: String) {
             self.title = title
         }
+
+        weak var delegate: MenuItemViewModelDelegate?
 
         let title: String
 
