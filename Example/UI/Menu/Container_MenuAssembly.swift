@@ -4,11 +4,17 @@ extension Container {
     var menuAssembly: MenuAssembly {
         struct Assembly: MenuAssembly {
 
+            let container: Container
+
             var viewModel: MenuViewModel {
-                return MainMenuViewModel()
+                return MainMenuViewModel(assembly: self)
+            }
+
+            var tableViewExampleController: TableViewExampleController {
+                return TableViewExampleController(assembly: container.tableViewExampleAssembly)
             }
 
         }
-        return Assembly()
+        return Assembly(container: self)
     }
 }
