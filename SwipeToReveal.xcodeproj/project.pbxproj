@@ -17,6 +17,8 @@
 		318EB7EB1E5A43D70072426E /* MenuViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7E91E5A43340072426E /* MenuViewControllerSpec.swift */; };
 		318EB7ED1E5A44610072426E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7EC1E5A44610072426E /* MenuViewModel.swift */; };
 		318EB7EF1E5A44AA0072426E /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */; };
+		318EB7F11E5A44F60072426E /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7F01E5A44F60072426E /* MainMenuViewModel.swift */; };
+		318EB7F31E5A453D0072426E /* PushMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7F21E5A453D0072426E /* PushMenuItemViewModel.swift */; };
 		31A076851E57C2FB00D82BD7 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076841E57C2FB00D82BD7 /* Container.swift */; };
 		31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */; };
 		31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */; };
@@ -54,6 +56,8 @@
 		318EB7E91E5A43340072426E /* MenuViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerSpec.swift; sourceTree = "<group>"; };
 		318EB7EC1E5A44610072426E /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
+		318EB7F01E5A44F60072426E /* MainMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		318EB7F21E5A453D0072426E /* PushMenuItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushMenuItemViewModel.swift; sourceTree = "<group>"; };
 		31A076841E57C2FB00D82BD7 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		31A076861E57C31500D82BD7 /* AppDelegateAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateAssembly.swift; sourceTree = "<group>"; };
 		31A076881E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_AppDelegateAssembly.swift; sourceTree = "<group>"; };
@@ -204,10 +208,12 @@
 			isa = PBXGroup;
 			children = (
 				31A076B01E57D29000D82BD7 /* Container_MenuAssembly.swift */,
+				318EB7F01E5A44F60072426E /* MainMenuViewModel.swift */,
 				31A076AC1E57D27700D82BD7 /* MenuAssembly.swift */,
 				318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */,
 				31A076AE1E57D28000D82BD7 /* MenuViewController.swift */,
 				318EB7EC1E5A44610072426E /* MenuViewModel.swift */,
+				318EB7F21E5A453D0072426E /* PushMenuItemViewModel.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -460,9 +466,11 @@
 			files = (
 				314A55901E48E1CC00DD410B /* TableViewExampleController.swift in Sources */,
 				31A076891E57C33B00D82BD7 /* Container_AppDelegateAssembly.swift in Sources */,
+				318EB7F11E5A44F60072426E /* MainMenuViewModel.swift in Sources */,
 				314A558E1E48E1CC00DD410B /* AppDelegate.swift in Sources */,
 				31A076871E57C31500D82BD7 /* AppDelegateAssembly.swift in Sources */,
 				31A076AF1E57D28000D82BD7 /* MenuViewController.swift in Sources */,
+				318EB7F31E5A453D0072426E /* PushMenuItemViewModel.swift in Sources */,
 				31A076AA1E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift in Sources */,
 				31A076B11E57D29000D82BD7 /* Container_MenuAssembly.swift in Sources */,
 				31A076851E57C2FB00D82BD7 /* Container.swift in Sources */,
