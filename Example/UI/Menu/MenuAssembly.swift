@@ -1,1 +1,3 @@
-protocol MenuAssembly {}
+protocol MenuAssembly {
+    var viewModel: MenuViewModel { get }
+}
