@@ -22,7 +22,7 @@ class MenuViewControllerSpec: QuickSpec {
                 }
 
                 it("should have correct title") {
-                    expect(sut.navigationItem.title).to(equal("Menu Title"))
+                    expect(sut.navigationItem.title).to(equal(viewModel.title))
                 }
 
                 describe("table view") {
@@ -49,6 +49,20 @@ class MenuViewControllerSpec: QuickSpec {
                             it("should have correct accessory type") {
                                 expect(cell.accessoryType).to(equal(UITableViewCellAccessoryType.disclosureIndicator))
                             }
+
+                            it("should not be selected") {
+                                expect(viewModel._items[row]._isSelected).to(beFalse())
+                            }
+
+                            context("select") {
+                                beforeEach {
+                                    sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: row, section: 0))
+                                }
+
+                                it("should select view model") {
+                                    expect(viewModel._items[row]._isSelected).to(beTrue())
+                                }
+                            }
                         }
                     }
 
@@ -66,15 +80,30 @@ class MenuViewControllerSpec: QuickSpec {
 
     struct ViewModel: MenuViewModel {
         let title = "Menu Title"
-        let items: [MenuItemViewModel] = [
+
+        var items: [MenuItemViewModel] {
+            return _items
+        }
+
+        let _items: [ItemViewModel] = [
             ItemViewModel(title: "Menu Item 1"),
             ItemViewModel(title: "Menu Item 2"),
             ItemViewModel(title: "Menu Item 3")
         ]
     }
 
-    struct ItemViewModel: MenuItemViewModel {
+    class ItemViewModel: MenuItemViewModel {
+        init(title: String) {
+            self.title = title
+        }
+
         let title: String
+
+        func select() {
+            _isSelected = true
+        }
+
+        private(set) var _isSelected = false
     }
 
 }

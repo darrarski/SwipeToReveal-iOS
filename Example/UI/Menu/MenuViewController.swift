@@ -38,6 +38,14 @@ class MenuViewController: UITableViewController {
         return cell
     }
 
+    // MARK: UITableViewDelegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 0 else { fatalError() }
+        let viewModel = self.viewModel.items[indexPath.row]
+        viewModel.select()
+    }
+
     // MARK: Private
 
     private let assembly: MenuAssembly
