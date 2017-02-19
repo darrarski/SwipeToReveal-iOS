@@ -15,7 +15,7 @@ extension Container {
             }
 
             var rootViewController: UIViewController {
-                return TableViewExampleController(assembly: container.tableViewExampleAssembly)
+                return MenuViewController(assembly: container.menuAssembly)
             }
 
         }
