@@ -1,4 +1,4 @@
-class PushMenuItemViewModel: MenuItemViewModel {
+class MainMenuItemViewModel: MenuItemViewModel {
 
     init(title: String) {
         self.title = title
