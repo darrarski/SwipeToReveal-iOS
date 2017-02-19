@@ -4,10 +4,14 @@ class MainMenuItemViewModel: MenuItemViewModel {
         self.title = title
     }
 
+    // MARK: MenuItemViewModel
+
+    weak var delegate: MenuItemViewModelDelegate?
+
     let title: String
 
     func select() {
-        // TODO:
+        delegate?.menuItemViewModelDidSelect(self)
     }
 
 }
