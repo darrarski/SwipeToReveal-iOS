@@ -1,0 +1,7 @@
+opt_in_rules:
+  - empty_count
+  - redundant_nil_coalesing
+
+disabled_rules:
+  - line_length
+  - variable_name
