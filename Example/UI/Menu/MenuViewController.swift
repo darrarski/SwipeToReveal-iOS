@@ -1,11 +1,12 @@
 import UIKit
 
-class MenuViewController: UITableViewController {
+class MenuViewController: UITableViewController, MenuViewModelDelegate {
 
     init(assembly: MenuAssembly) {
         self.assembly = assembly
         viewModel = assembly.viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
     }
 
     @available(*, unavailable)
@@ -44,6 +45,13 @@ class MenuViewController: UITableViewController {
         guard indexPath.section == 0 else { fatalError() }
         let viewModel = self.viewModel.items[indexPath.row]
         viewModel.select()
+    }
+
+    // MARK: MenuViewModelDelegate
+
+    func menuViewModel(_ viewModel: MenuViewModel, presentViewController viewController: UIViewController) {
+        guard viewModel === self.viewModel else { fatalError() }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     // MARK: Private
