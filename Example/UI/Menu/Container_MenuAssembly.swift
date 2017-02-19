@@ -10,7 +10,7 @@ extension Container {
                 return MainMenuViewModel(assembly: self)
             }
 
-            var tableViewExampleController: TableViewExampleController {
+            var tableViewExampleController: UIViewController {
                 return TableViewExampleController(assembly: container.tableViewExampleAssembly)
             }
 

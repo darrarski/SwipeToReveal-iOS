@@ -1,4 +1,6 @@
+import UIKit
+
 protocol MenuAssembly {
     var viewModel: MenuViewModel { get }
-    var tableViewExampleController: TableViewExampleController { get }
+    var tableViewExampleController: UIViewController { get }
 }
