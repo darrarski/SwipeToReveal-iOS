@@ -4,7 +4,7 @@ class MenuViewController: UITableViewController {
 
     init(assembly: MenuAssembly) {
         self.assembly = assembly
-        self.viewModel = assembly.viewModel
+        viewModel = assembly.viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
