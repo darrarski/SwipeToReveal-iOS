@@ -6,4 +6,8 @@ class PushMenuItemViewModel: MenuItemViewModel {
 
     let title: String
 
+    func select() {
+        // TODO:
+    }
+
 }
