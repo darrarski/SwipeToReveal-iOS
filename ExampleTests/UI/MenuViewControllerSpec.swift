@@ -30,16 +30,20 @@ class MenuViewControllerSpec: QuickSpec {
                         expect(sut.numberOfSections(in: sut.tableView)).to(equal(1))
                     }
 
-                    it("should have 3 rows") {
+                    it("should have 3 rows in first section") {
                         expect(sut.tableView(sut.tableView, numberOfRowsInSection: 0)).to(equal(3))
                     }
 
-                    func testCell(_ row: Int) {
-                        describe("cell \(row + 1)") {
+                    it("should have 0 rows in second section") {
+                        expect(sut.tableView(sut.tableView, numberOfRowsInSection: 1)).to(equal(0))
+                    }
+
+                    func testCell(section: Int, row: Int) {
+                        describe("cell \(row) in section \(section)") {
                             var cell: UITableViewCell!
 
                             beforeEach {
-                                cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: row, section: 0))
+                                cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: row, section: section))
                             }
 
                             it("should have correct title") {
@@ -56,7 +60,7 @@ class MenuViewControllerSpec: QuickSpec {
 
                             context("select") {
                                 beforeEach {
-                                    sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: row, section: 0))
+                                    sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: row, section: section))
                                 }
 
                                 it("should select view model") {
@@ -66,9 +70,29 @@ class MenuViewControllerSpec: QuickSpec {
                         }
                     }
 
-                    testCell(0)
-                    testCell(1)
-                    testCell(2)
+                    testCell(section: 0, row: 0)
+                    testCell(section: 0, row: 1)
+                    testCell(section: 0, row: 2)
+
+                    func testInvalidCell(section: Int, row: Int) {
+                        describe("invalid cell \(row) in section \(section)") {
+                            it("should throw assertion") {
+                                expect { () -> Void in
+                                    _ = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: row, section: section))
+                                }.to(throwAssertion())
+                            }
+
+                            it("should throw assertion when selected") {
+                                expect { () -> Void in
+                                    sut.tableView(sut.tableView, didSelectRowAt: IndexPath(row: row, section: section))
+                                }.to(throwAssertion())
+                            }
+                        }
+                    }
+
+                    testInvalidCell(section: 0, row: 3)
+                    testInvalidCell(section: 1, row: 0)
+
                 }
             }
         }
