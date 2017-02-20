@@ -69,7 +69,7 @@
 		31A0768E1E57C48A00D82BD7 /* SwipeToRevealExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeToRevealExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A076921E57C48A00D82BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
-		31A076A11E57CD6900D82BD7 /* WindowSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
+		31A076A11E57CD6900D82BD7 /* WindowSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowSpy.swift; path = WindowSpy.swift; sourceTree = "<group>"; };
 		31A076A71E57CEA400D82BD7 /* TableViewExampleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExampleAssembly.swift; sourceTree = "<group>"; };
 		31A076A91E57CEB200D82BD7 /* Container_TableViewExampleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container_TableViewExampleAssembly.swift; sourceTree = "<group>"; };
 		31A076AC1E57D27700D82BD7 /* MenuAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				315BBE061E5BA976006148B7 /* NavigationControllerSpy.swift */,
+				31A076A11E57CD6900D82BD7 /* WindowSpy.swift */,
 			);
-			name = Doubles;
 			path = Doubles;
 			sourceTree = "<group>";
 		};
@@ -233,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				31A076961E57C67F00D82BD7 /* AppDelegateSpec.swift */,
-				31A076A11E57CD6900D82BD7 /* WindowSpy.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
