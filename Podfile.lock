@@ -4,6 +4,8 @@ PODS:
   - Reveal-SDK (6)
   - SnapKit (3.1.2)
   - SwiftLint (0.16.1)
+  - SwipeToReveal (1.0.2):
+    - SnapKit (~> 3.0)
 
 DEPENDENCIES:
   - Nimble (~> 6.0)
@@ -11,6 +13,11 @@ DEPENDENCIES:
   - Reveal-SDK
   - SnapKit (~> 3.0)
   - SwiftLint (~> 0.16)
+  - SwipeToReveal (from `.`)
+
+EXTERNAL SOURCES:
+  SwipeToReveal:
+    :path: "."
 
 SPEC CHECKSUMS:
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
@@ -18,7 +25,8 @@ SPEC CHECKSUMS:
   Reveal-SDK: 67460e58f93711c7b18631d12c2b5de7740e48b5
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
+  SwipeToReveal: e308bc7d5c60cb9d5ab997a57315de444c9c15a3
 
-PODFILE CHECKSUM: 3b7f87bd900b2ed9110b8e8b2fcc05c152ad5f17
+PODFILE CHECKSUM: 827d4f2a19f771c814a6a6c64e9b930ee7400ba4
 
 COCOAPODS: 1.2.0
