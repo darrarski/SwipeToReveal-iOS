@@ -196,8 +196,8 @@
 				311714D61E5A6AF60029A012 /* MainMenuItemViewModelSpec.swift */,
 				311714D91E5A6CBA0029A012 /* MainMenuViewModelSpec.swift */,
 				318EB7E91E5A43340072426E /* MenuViewControllerSpec.swift */,
-				31D017851E5BB15500F89A35 /* TableExampleViewControllerSpec.swift */,
 				31D017881E5BB75000F89A35 /* TableExampleCellSpec.swift */,
+				31D017851E5BB15500F89A35 /* TableExampleViewControllerSpec.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
