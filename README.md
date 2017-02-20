@@ -13,7 +13,7 @@ You can integrate `SwipeToReveal` with your project using CocoaPods. Just add th
 
 ## Usage
 
-Check out included example project. It shows how to use swipe menu on `UITableViewCell`, but menu could be embedded anywhere in the view hierarchy. All public headers are documented.
+Check out included example project. It shows how to use swipe menu on `UITableViewCell`, but component could be embedded **anywhere** in the view hierarchy. All public headers are documented.
 
 
 ## License
