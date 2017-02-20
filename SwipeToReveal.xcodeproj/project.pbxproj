@@ -102,6 +102,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311714DC1E5A6EE10029A012 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				318EB7F21E5A453D0072426E /* MainMenuItemViewModel.swift */,
+				318EB7F01E5A44F60072426E /* MainMenuViewModel.swift */,
+				318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */,
+				318EB7EC1E5A44610072426E /* MenuViewModel.swift */,
+			);
+			name = ViewModels;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		311714DD1E5A6EE70029A012 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31A076AE1E57D28000D82BD7 /* MenuViewController.swift */,
+			);
+			name = ViewControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		314A55811E48E1CC00DD410B = {
 			isa = PBXGroup;
 			children = (
@@ -213,13 +234,10 @@
 		31A076AB1E57D26E00D82BD7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				311714DD1E5A6EE70029A012 /* ViewControllers */,
+				311714DC1E5A6EE10029A012 /* ViewModels */,
 				31A076B01E57D29000D82BD7 /* Container_MenuAssembly.swift */,
-				318EB7F21E5A453D0072426E /* MainMenuItemViewModel.swift */,
-				318EB7F01E5A44F60072426E /* MainMenuViewModel.swift */,
 				31A076AC1E57D27700D82BD7 /* MenuAssembly.swift */,
-				318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */,
-				31A076AE1E57D28000D82BD7 /* MenuViewController.swift */,
-				318EB7EC1E5A44610072426E /* MenuViewModel.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
