@@ -35,6 +35,14 @@ class MainMenuViewModelSpec: QuickSpec {
                         .to(be(assembly.tableViewExampleController))
                 }
             }
+
+            context("unknown item did select") {
+                it("should throw assertion") {
+                    expect { () -> Void in
+                        sut.menuItemViewModelDidSelect(MainMenuItemViewModel(title: "Unknown"))
+                    }.to(throwAssertion())
+                }
+            }
         }
     }
 
