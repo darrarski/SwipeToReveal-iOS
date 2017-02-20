@@ -5,3 +5,4 @@ opt_in_rules:
 disabled_rules:
   - line_length
   - variable_name
+  - function_body_length
