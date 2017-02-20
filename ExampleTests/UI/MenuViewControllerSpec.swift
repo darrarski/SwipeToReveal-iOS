@@ -126,6 +126,14 @@ class MenuViewControllerSpec: QuickSpec {
                         expect(result?.animated).to(beTrue())
                     }
                 }
+
+                context("unknown menu view model presents view controller") {
+                    it("should throw asserion") {
+                        expect { () -> Void in
+                            sut.menuViewModel(ViewModel(), presentViewController: UIViewController(nibName: nil, bundle: nil))
+                        }.to(throwAssertion())
+                    }
+                }
             }
         }
     }
