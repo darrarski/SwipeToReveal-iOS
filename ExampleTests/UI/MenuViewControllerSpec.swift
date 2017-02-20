@@ -140,7 +140,7 @@ class MenuViewControllerSpec: QuickSpec {
 
     struct Assembly: MenuAssembly {
         let viewModel: MenuViewModel
-        var tableViewExampleController: UIViewController { fatalError() }
+        var tableExampleViewController: UIViewController { fatalError() }
     }
 
     class ViewModel: MenuViewModel {

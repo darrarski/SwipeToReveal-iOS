@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 import SwipeToReveal
 
-class TableViewExampleCell: UITableViewCell {
+class TableExampleCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -65,7 +65,7 @@ class TableViewExampleCell: UITableViewCell {
 
 }
 
-private extension TableViewExampleCell {
+private extension TableExampleCell {
     struct Factory {
 
         static var label: UILabel {

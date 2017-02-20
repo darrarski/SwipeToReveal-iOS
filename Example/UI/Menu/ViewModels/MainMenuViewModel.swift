@@ -23,7 +23,7 @@ class MainMenuViewModel: MenuViewModel, MenuItemViewModelDelegate {
 
     func menuItemViewModelDidSelect(_ viewModel: MenuItemViewModel) {
         if viewModel === tableViewExample {
-            let viewController = assembly.tableViewExampleController
+            let viewController = assembly.tableExampleViewController
             delegate?.menuViewModel(self, presentViewController: viewController)
         } else {
             fatalError()

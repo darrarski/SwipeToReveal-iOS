@@ -32,7 +32,7 @@ class MainMenuViewModelSpec: QuickSpec {
 
                 it("should present correct view controller") {
                     expect(delegate._menuViewModelDidPresentViewController?.viewController)
-                        .to(be(assembly.tableViewExampleController))
+                        .to(be(assembly.tableExampleViewController))
                 }
             }
 
@@ -48,7 +48,7 @@ class MainMenuViewModelSpec: QuickSpec {
 
     struct Assembly: MenuAssembly {
         var viewModel: MenuViewModel { fatalError() }
-        let tableViewExampleController = UIViewController(nibName: nil, bundle: nil)
+        let tableExampleViewController = UIViewController(nibName: nil, bundle: nil)
     }
 
     class Delegate: MenuViewModelDelegate {

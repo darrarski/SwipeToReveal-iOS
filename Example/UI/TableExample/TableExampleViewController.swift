@@ -1,8 +1,8 @@
 import UIKit
 
-class TableViewExampleController: UITableViewController {
+class TableExampleViewController: UITableViewController {
 
-    init(assembly: TableViewExampleAssembly) {
+    init(assembly: TableExampleAssembly) {
         self.assembly = assembly
         super.init(style: .plain)
     }
@@ -14,7 +14,7 @@ class TableViewExampleController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(TableViewExampleCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableExampleCell.self, forCellReuseIdentifier: "cell")
     }
 
     // MARK: UITableViewDataSource
@@ -32,7 +32,7 @@ class TableViewExampleController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                       for: indexPath) as? TableViewExampleCell else {
+                                                       for: indexPath) as? TableExampleCell else {
             fatalError()
         }
         cell.label.text = "Cell \(indexPath.row + 1)"
@@ -52,6 +52,6 @@ class TableViewExampleController: UITableViewController {
 
     // MARK: Private
 
-    private let assembly: TableViewExampleAssembly
+    private let assembly: TableExampleAssembly
 
 }
