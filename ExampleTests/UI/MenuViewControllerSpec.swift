@@ -101,6 +101,32 @@ class MenuViewControllerSpec: QuickSpec {
 
                 }
             }
+
+            context("embedded in UINavigationController") {
+                var navigationController: NavigationControllerSpy!
+
+                beforeEach {
+                    navigationController = NavigationControllerSpy(rootViewController: sut)
+                    _ = navigationController.view
+                    _ = sut.view
+                    navigationController._reset()
+                }
+
+                context("menu view model presents view controller") {
+                    var viewController: UIViewController!
+
+                    beforeEach {
+                        viewController = UIViewController(nibName: nil, bundle: nil)
+                        sut.menuViewModel(viewModel, presentViewController: viewController)
+                    }
+
+                    it("should push correct view controller animated") {
+                        let result = navigationController._didPushViewController
+                        expect(result?.viewController).to(be(viewController))
+                        expect(result?.animated).to(beTrue())
+                    }
+                }
+            }
         }
     }
 
