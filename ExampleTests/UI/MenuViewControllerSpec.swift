@@ -5,7 +5,13 @@ import Nimble
 class MenuViewControllerSpec: QuickSpec {
 
     override func spec() {
-        describe("MenuViewController") {
+        context("init with coder") {
+            it("should throw asserion") {
+                expect { () -> Void in _ = MenuViewController(coder: NSCoder()) }.to(throwAssertion())
+            }
+        }
+
+        context("init") {
             var sut: MenuViewController!
             var assembly: Assembly!
             var viewModel: ViewModel!
