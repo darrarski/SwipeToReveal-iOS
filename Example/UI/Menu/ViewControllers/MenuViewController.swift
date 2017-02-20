@@ -9,7 +9,6 @@ class MenuViewController: UITableViewController, MenuViewModelDelegate {
         viewModel.delegate = self
     }
 
-    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
