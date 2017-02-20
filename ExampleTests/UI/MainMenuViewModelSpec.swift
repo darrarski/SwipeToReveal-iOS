@@ -21,9 +21,9 @@ class MainMenuViewModelSpec: QuickSpec {
                 expect(sut.items.count).to(equal(1))
             }
 
-            context("select first item") {
+            context("first item did select") {
                 beforeEach {
-                    sut.items.first?.select()
+                    sut.menuItemViewModelDidSelect(sut.items.first!)
                 }
 
                 it("should call delegate") {
