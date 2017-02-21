@@ -88,6 +88,47 @@ class SwipeToRevealViewSpec: QuickSpec {
                         let expectation = CGPoint(x: sut.bounds.maxX, y: sut.bounds.minY)
                         expect(origin).to(equal(expectation))
                     }
+
+                    context("reveal right") {
+                        beforeEach {
+                            sut.revealRight(animated: false)
+                            sut.setNeedsLayout()
+                            sut.layoutIfNeeded()
+                        }
+
+                        it("should right view have correct size") {
+                            expect(rightView.frame.width).to(equal(rightViewWidth))
+                            expect(rightView.frame.height).to(equal(sut.bounds.height))
+                        }
+
+                        it("should right view have correct origin") {
+                            let origin = rightView.convert(rightView.frame.origin, to: sut)
+                            let expectation = CGPoint(
+                                x: sut.bounds.maxX - rightView.frame.width,
+                                y: sut.bounds.minY
+                            )
+                            expect(origin).to(equal(expectation))
+                        }
+
+                        context("close") {
+                            beforeEach {
+                                sut.close(animated: false)
+                                sut.setNeedsLayout()
+                                sut.layoutIfNeeded()
+                            }
+
+                            it("should right view have correct size") {
+                                expect(rightView.frame.width).to(equal(rightViewWidth))
+                                expect(rightView.frame.height).to(equal(sut.bounds.height))
+                            }
+
+                            it("should right view have correct origin") {
+                                let origin = rightView.convert(rightView.frame.origin, to: sut)
+                                let expectation = CGPoint(x: sut.bounds.maxX, y: sut.bounds.minY)
+                                expect(origin).to(equal(expectation))
+                            }
+                        }
+                    }
                 }
             }
         }
