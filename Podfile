@@ -16,3 +16,9 @@ target 'SwipeToRevealExampleTests' do
   pod 'Quick', '~> 1.1'
   pod 'Nimble', '~> 6.0'
 end
+
+target 'SwipeToRevealTests' do
+  pod 'SwipeToReveal', :path => '.'
+  pod 'Quick', '~> 1.1'
+  pod 'Nimble', '~> 6.0'
+end
