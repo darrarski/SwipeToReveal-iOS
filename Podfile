@@ -8,6 +8,7 @@ target 'SwipeToRevealExample' do
   pod 'Reveal-SDK', :configurations => ['Debug']
   pod 'SnapKit', '~> 3.0'
   pod 'SwiftLint', '~> 0.16'
+  pod 'Reusable', '~> 4.0'
 end
 
 target 'SwipeToRevealExampleTests' do

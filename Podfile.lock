@@ -1,6 +1,11 @@
 PODS:
   - Nimble (6.0.1)
   - Quick (1.1.0)
+  - Reusable (4.0.0):
+    - Reusable/Storyboard (= 4.0.0)
+    - Reusable/View (= 4.0.0)
+  - Reusable/Storyboard (4.0.0)
+  - Reusable/View (4.0.0)
   - Reveal-SDK (6)
   - SnapKit (3.1.2)
   - SwiftLint (0.16.1)
@@ -10,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Nimble (~> 6.0)
   - Quick (~> 1.1)
+  - Reusable (~> 4.0)
   - Reveal-SDK
   - SnapKit (~> 3.0)
   - SwiftLint (~> 0.16)
@@ -22,11 +28,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
   Reveal-SDK: 67460e58f93711c7b18631d12c2b5de7740e48b5
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
   SwipeToReveal: e308bc7d5c60cb9d5ab997a57315de444c9c15a3
 
-PODFILE CHECKSUM: 827d4f2a19f771c814a6a6c64e9b930ee7400ba4
+PODFILE CHECKSUM: 5cb7a66d546afe37fcf19c7d15c69e40bfe1512a
 
 COCOAPODS: 1.2.0
