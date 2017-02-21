@@ -47,8 +47,12 @@ class SwipeToRevealViewSpec: QuickSpec {
                     sut.layoutIfNeeded()
                 }
 
-                it("should have content view") {
+                it("should have correct content view") {
                     expect(sut.contentView).to(be(contentView))
+                }
+
+                it("should content view have superview") {
+                    expect(contentView.superview).notTo(beNil())
                 }
 
                 it("should content view have correct size") {
@@ -58,6 +62,29 @@ class SwipeToRevealViewSpec: QuickSpec {
                 it("should content view have correct origin") {
                     let origin = contentView.convert(contentView.frame.origin, to: sut)
                     expect(origin).to(equal(CGPoint.zero))
+                }
+
+                context("change content view") {
+                    var newContentView: UIView!
+
+                    beforeEach {
+                        newContentView = UIView(frame: .zero)
+                        sut.contentView = newContentView
+                        sut.setNeedsLayout()
+                        sut.layoutIfNeeded()
+                    }
+
+                    it("should have correct content view") {
+                        expect(sut.contentView).to(be(newContentView))
+                    }
+
+                    it("should new content view have superview") {
+                        expect(newContentView.superview).notTo(beNil())
+                    }
+
+                    it("should previous content view not have superview") {
+                        expect(contentView.superview).to(beNil())
+                    }
                 }
 
                 context("set right view") {
@@ -74,8 +101,12 @@ class SwipeToRevealViewSpec: QuickSpec {
                         sut.layoutIfNeeded()
                     }
 
-                    it("should have right view") {
+                    it("should have correct right view") {
                         expect(sut.rightView).to(be(rightView))
+                    }
+
+                    it("should right view have superview") {
+                        expect(rightView.superview).notTo(beNil())
                     }
 
                     it("should right view have correct size") {
@@ -87,6 +118,29 @@ class SwipeToRevealViewSpec: QuickSpec {
                         let origin = rightView.convert(rightView.frame.origin, to: sut)
                         let expectation = CGPoint(x: sut.bounds.maxX, y: sut.bounds.minY)
                         expect(origin).to(equal(expectation))
+                    }
+
+                    context("change right view") {
+                        var newRightView: UIView!
+
+                        beforeEach {
+                            newRightView = UIView(frame: .zero)
+                            sut.rightView = newRightView
+                            sut.setNeedsLayout()
+                            sut.layoutIfNeeded()
+                        }
+
+                        it("should have correct right view") {
+                            expect(sut.rightView).to(be(newRightView))
+                        }
+
+                        it("should new right view have superview") {
+                            expect(newRightView.superview).notTo(beNil())
+                        }
+
+                        it("should previous right view not have superview") {
+                            expect(rightView.superview).to(beNil())
+                        }
                     }
 
                     context("reveal right") {
