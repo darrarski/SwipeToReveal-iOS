@@ -16,6 +16,7 @@
 		314A55981E48E1CC00DD410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314A55961E48E1CC00DD410B /* LaunchScreen.storyboard */; };
 		314A55A31E48E8BA00DD410B /* TableExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A55A21E48E8BA00DD410B /* TableExampleCell.swift */; };
 		315BBE071E5BA976006148B7 /* NavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315BBE061E5BA976006148B7 /* NavigationControllerSpy.swift */; };
+		318DD1701E5CDA9100F1A091 /* SwipeToRevealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DD16F1E5CDA9100F1A091 /* SwipeToRevealTests.swift */; };
 		318EB7EB1E5A43D70072426E /* MenuViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7E91E5A43340072426E /* MenuViewControllerSpec.swift */; };
 		318EB7ED1E5A44610072426E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7EC1E5A44610072426E /* MenuViewModel.swift */; };
 		318EB7EF1E5A44AA0072426E /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */; };
@@ -58,6 +59,9 @@
 		314A55991E48E1CC00DD410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		314A55A21E48E8BA00DD410B /* TableExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableExampleCell.swift; sourceTree = "<group>"; };
 		315BBE061E5BA976006148B7 /* NavigationControllerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerSpy.swift; sourceTree = "<group>"; };
+		318DD16D1E5CDA9100F1A091 /* SwipeToRevealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeToRevealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		318DD16F1E5CDA9100F1A091 /* SwipeToRevealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToRevealTests.swift; sourceTree = "<group>"; };
+		318DD1711E5CDA9100F1A091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318EB7E91E5A43340072426E /* MenuViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerSpec.swift; sourceTree = "<group>"; };
 		318EB7EC1E5A44610072426E /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		318EB7EE1E5A44AA0072426E /* MenuItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +94,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA899CDFED923D2FBF21F26 /* Pods_SwipeToRevealExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		318DD16A1E5CDA9100F1A091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +142,7 @@
 				C69363D1A96F41166FC06D26 /* Frameworks */,
 				BCB2B849A7B008448623F7A5 /* Pods */,
 				314A558B1E48E1CC00DD410B /* Products */,
+				318DD16E1E5CDA9100F1A091 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +151,7 @@
 			children = (
 				314A558A1E48E1CC00DD410B /* SwipeToRevealExample.app */,
 				31A0768E1E57C48A00D82BD7 /* SwipeToRevealExampleTests.xctest */,
+				318DD16D1E5CDA9100F1A091 /* SwipeToRevealTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +201,15 @@
 				31A076A11E57CD6900D82BD7 /* WindowSpy.swift */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		318DD16E1E5CDA9100F1A091 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				318DD1711E5CDA9100F1A091 /* Info.plist */,
+				318DD16F1E5CDA9100F1A091 /* SwipeToRevealTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		318EB7E81E5A43260072426E /* UI */ = {
@@ -297,6 +319,23 @@
 			productReference = 314A558A1E48E1CC00DD410B /* SwipeToRevealExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		318DD16C1E5CDA9100F1A091 /* SwipeToRevealTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 318DD1741E5CDA9100F1A091 /* Build configuration list for PBXNativeTarget "SwipeToRevealTests" */;
+			buildPhases = (
+				318DD1691E5CDA9100F1A091 /* Sources */,
+				318DD16A1E5CDA9100F1A091 /* Frameworks */,
+				318DD16B1E5CDA9100F1A091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwipeToRevealTests;
+			productName = SwipeToRevealTests;
+			productReference = 318DD16D1E5CDA9100F1A091 /* SwipeToRevealTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		31A0768D1E57C48A00D82BD7 /* SwipeToRevealExampleTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31A076931E57C48A00D82BD7 /* Build configuration list for PBXNativeTarget "SwipeToRevealExampleTests" */;
@@ -333,6 +372,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Manual;
 					};
+					318DD16C1E5CDA9100F1A091 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
 					31A0768D1E57C48A00D82BD7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Manual;
@@ -355,6 +398,7 @@
 			targets = (
 				314A55891E48E1CC00DD410B /* SwipeToRevealExample */,
 				31A0768D1E57C48A00D82BD7 /* SwipeToRevealExampleTests */,
+				318DD16C1E5CDA9100F1A091 /* SwipeToRevealTests */,
 			);
 		};
 /* End PBXProject section */
@@ -366,6 +410,13 @@
 			files = (
 				314A55981E48E1CC00DD410B /* LaunchScreen.storyboard in Resources */,
 				314A55951E48E1CC00DD410B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		318DD16B1E5CDA9100F1A091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +570,14 @@
 				31A076A81E57CEA400D82BD7 /* TableExampleAssembly.swift in Sources */,
 				318EB7ED1E5A44610072426E /* MenuViewModel.swift in Sources */,
 				314A55A31E48E8BA00DD410B /* TableExampleCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		318DD1691E5CDA9100F1A091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				318DD1701E5CDA9100F1A091 /* SwipeToRevealTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +739,28 @@
 			};
 			name = Release;
 		};
+		318DD1721E5CDA9100F1A091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SwipeToRevealTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		318DD1731E5CDA9100F1A091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.SwipeToRevealTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		31A076941E57C48A00D82BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B4979947EEC3481468A09BD /* Pods-SwipeToRevealExampleTests.debug.xcconfig */;
@@ -727,6 +808,15 @@
 			buildConfigurations = (
 				314A559D1E48E1CC00DD410B /* Debug */,
 				314A559E1E48E1CC00DD410B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		318DD1741E5CDA9100F1A091 /* Build configuration list for PBXNativeTarget "SwipeToRevealTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				318DD1721E5CDA9100F1A091 /* Debug */,
+				318DD1731E5CDA9100F1A091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
