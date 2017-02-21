@@ -5,7 +5,13 @@ import SwipeToReveal
 class SwipeToRevealViewSpec: QuickSpec {
 
     override func spec() {
-        describe("SwipeToRevealView") {
+        context("init with coder") {
+            it("should throw asserion") {
+                expect { () -> Void in _ = SwipeToRevealView(coder: NSCoder()) }.to(throwAssertion())
+            }
+        }
+
+        context("init") {
             var sut: SwipeToRevealView!
             var size: CGSize!
 
