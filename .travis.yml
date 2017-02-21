@@ -1,8 +1,9 @@
-osx_image: xcode8.1
+osx_image: xcode8.2
 language: objective-c
 cache: cocoapods
 before_install:
-  - bundle install 
+  - bundle install
+  - bundle exec pod install
 script:
   - set -o pipefail && xcodebuild test -workspace SwipeToReveal.xcworkspace -scheme 'SwipeToReveal Tests' -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' ONLY_ACTIVE_ARCH=NO | xcpretty
   - set -o pipefail && xcodebuild test -workspace SwipeToReveal.xcworkspace -scheme 'SwipeToReveal Example Tests' -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' ONLY_ACTIVE_ARCH=NO | xcpretty
