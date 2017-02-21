@@ -1,4 +1,5 @@
 import UIKit
+import Reusable
 
 class TableExampleViewController: UITableViewController {
 
@@ -13,7 +14,7 @@ class TableExampleViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(TableExampleCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(cellType: TableExampleCell.self)
     }
 
     // MARK: UITableViewDataSource
@@ -26,10 +27,7 @@ class TableExampleViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                       for: indexPath) as? TableExampleCell else {
-            fatalError()
-        }
+        let cell: TableExampleCell = tableView.dequeueReusableCell(for: indexPath)
         cell.label.text = "Cell \(indexPath.row + 1)"
         return cell
     }

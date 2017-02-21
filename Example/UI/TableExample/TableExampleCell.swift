@@ -1,8 +1,9 @@
 import UIKit
 import SnapKit
 import SwipeToReveal
+import Reusable
 
-class TableExampleCell: UITableViewCell {
+class TableExampleCell: UITableViewCell, Reusable {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
