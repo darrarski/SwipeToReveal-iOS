@@ -9,6 +9,6 @@ before_install:
   - bundle install --without=documentation
   - bundle exec pod install --repo-update
 script:
-  - set -o pipefail && xcodebuild test -workspace SwipeToReveal.xcworkspace -scheme 'SwipeToReveal Tests' -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' ONLY_ACTIVE_ARCH=NO | xcpretty
-  - set -o pipefail && xcodebuild test -workspace SwipeToReveal.xcworkspace -scheme 'SwipeToReveal Example Tests' -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' ONLY_ACTIVE_ARCH=NO | xcpretty
+  - set -o pipefail && xcodebuild test -workspace SwipeToReveal.xcworkspace -scheme 'SwipeToReveal Tests' -destination 'id=22FA2149-1241-469C-BF6D-462D3837DB72' ONLY_ACTIVE_ARCH=NO | xcpretty
+  - set -o pipefail && xcodebuild test -workspace SwipeToReveal.xcworkspace -scheme 'SwipeToReveal Example Tests' -destination 'id=22FA2149-1241-469C-BF6D-462D3837DB72' ONLY_ACTIVE_ARCH=NO | xcpretty
   - pod lib lint
