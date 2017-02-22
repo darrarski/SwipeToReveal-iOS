@@ -12,7 +12,9 @@ Customizable swipe-to-reveal menu for iOS apps.
 
 You can integrate `SwipeToReveal` with your project using CocoaPods. Just add this line to your `Podfile`:
 
-    pod 'SwipeToReveal', '~> 1.0'
+```ruby
+pod 'SwipeToReveal', '~> 1.0'
+```
 
 ## Usage
 
