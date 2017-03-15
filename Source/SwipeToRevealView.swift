@@ -171,7 +171,7 @@ open class SwipeToRevealView: UIView {
             handlePanEnded()
         }
       
-        delegate?.swipeToRevealView?(view: self, didPan pan: pgr)
+        delegate?.swipeToRevealView?(view: self, didPan: pgr)
     }
 
     private func handlePanBegan(point: CGFloat) {
