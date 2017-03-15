@@ -1,8 +1,15 @@
 import UIKit
 import SnapKit
 
+public protocol SwipeToRevealViewDelegate {
+  func swipeToRevealView(view: SwipeToRevealView, didClose animated: Bool)
+  func swipeToRevealView(view: SwipeToRevealView, didRevealRight animated: Bool)
+}
+
 /// Swipe-to-reveal view
-public class SwipeToRevealView: UIView {
+open class SwipeToRevealView: UIView {
+  
+    public var delegate: SwipeToRevealViewDelegate?
 
     /// Create SwipeToRevealView
     ///
@@ -24,6 +31,7 @@ public class SwipeToRevealView: UIView {
     public func close(animated: Bool) {
         contentOffset = closedOffset
         layoutIfNeeded(animated: animated)
+        delegate?.swipeToRevealView(view: self, didClose: animated)
     }
 
     /// Reveal right view
@@ -32,6 +40,7 @@ public class SwipeToRevealView: UIView {
     public func revealRight(animated: Bool) {
         contentOffset = rightRevealedOffset
         layoutIfNeeded(animated: animated)
+        delegate?.swipeToRevealView(view: self, didRevealRight: animated)
     }
 
     // MARK: Subviews
