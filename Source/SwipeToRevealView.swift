@@ -1,9 +1,9 @@
 import UIKit
 import SnapKit
 
-public protocol SwipeToRevealViewDelegate {
-  func swipeToRevealView(view: SwipeToRevealView, didClose animated: Bool)
-  func swipeToRevealView(view: SwipeToRevealView, didRevealRight animated: Bool)
+@objc public protocol SwipeToRevealViewDelegate {
+  @objc optional func swipeToRevealView(view: SwipeToRevealView, didClose animated: Bool)
+  @objc optional func swipeToRevealView(view: SwipeToRevealView, didRevealRight animated: Bool)
 }
 
 /// Swipe-to-reveal view
