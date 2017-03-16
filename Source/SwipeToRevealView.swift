@@ -8,7 +8,7 @@ public protocol SwipeToRevealViewDelegate {
 }
 
 /// Swipe-to-reveal view
-open class SwipeToRevealView: UIView {
+public class SwipeToRevealView: UIView {
   
     public weak var delegate: SwipeToRevealViewDelegate?
 
