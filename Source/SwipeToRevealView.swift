@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-public protocol SwipeToRevealViewDelegate {
+public protocol SwipeToRevealViewDelegate: class {
   func swipeToRevealView(view: SwipeToRevealView, didClose animated: Bool)
   func swipeToRevealView(view: SwipeToRevealView, didRevealRight animated: Bool)
   func swipeToRevealView(view: SwipeToRevealView, didPan pan: UIPanGestureRecognizer)
