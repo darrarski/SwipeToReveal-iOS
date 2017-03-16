@@ -1,17 +1,16 @@
 import UIKit
 import SnapKit
 
-@objc public protocol SwipeToRevealViewDelegate {
-  @objc optional func swipeToRevealView(view: SwipeToRevealView, didClose animated: Bool)
-  @objc optional func swipeToRevealView(view: SwipeToRevealView, didRevealRight animated: Bool)
-  @objc optional func swipeToRevealView(view: SwipeToRevealView, didPan pan: UIPanGestureRecognizer)
+public protocol SwipeToRevealViewDelegate {
+  func swipeToRevealView(view: SwipeToRevealView, didClose animated: Bool)
+  func swipeToRevealView(view: SwipeToRevealView, didRevealRight animated: Bool)
+  func swipeToRevealView(view: SwipeToRevealView, didPan pan: UIPanGestureRecognizer)
 }
-
 
 /// Swipe-to-reveal view
 open class SwipeToRevealView: UIView {
   
-    public var delegate: SwipeToRevealViewDelegate?
+    public weak var delegate: SwipeToRevealViewDelegate?
 
     /// Create SwipeToRevealView
     ///
@@ -171,7 +170,7 @@ open class SwipeToRevealView: UIView {
             handlePanEnded()
         }
       
-        delegate?.swipeToRevealView?(view: self, didPan: pgr)
+        delegate?.swipeToRevealView(view: self, didPan: pgr)
     }
 
     private func handlePanBegan(point: CGFloat) {
