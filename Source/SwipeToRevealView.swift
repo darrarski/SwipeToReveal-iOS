@@ -1,8 +1,16 @@
 import UIKit
 import SnapKit
 
+public protocol SwipeToRevealViewDelegate: class {
+  func swipeToRevealView(_ view: SwipeToRevealView, didCloseAnimated animated: Bool)
+  func swipeToRevealView(_ view: SwipeToRevealView, didRevealRightAnimated animated: Bool)
+  func swipeToRevealView(_ view: SwipeToRevealView, didPan pan: UIPanGestureRecognizer)
+}
+
 /// Swipe-to-reveal view
 public class SwipeToRevealView: UIView {
+  
+    public weak var delegate: SwipeToRevealViewDelegate?
 
     /// Create SwipeToRevealView
     ///
@@ -24,6 +32,7 @@ public class SwipeToRevealView: UIView {
     public func close(animated: Bool) {
         contentOffset = closedOffset
         layoutIfNeeded(animated: animated)
+        delegate?.swipeToRevealView(self, didCloseAnimated: animated)
     }
 
     /// Reveal right view
@@ -32,6 +41,7 @@ public class SwipeToRevealView: UIView {
     public func revealRight(animated: Bool) {
         contentOffset = rightRevealedOffset
         layoutIfNeeded(animated: animated)
+        delegate?.swipeToRevealView(self, didRevealRightAnimated: animated)
     }
 
     // MARK: Subviews
@@ -159,6 +169,8 @@ public class SwipeToRevealView: UIView {
         case .ended, .cancelled, .failed:
             handlePanEnded()
         }
+      
+        delegate?.swipeToRevealView(self, didPan: pgr)
     }
 
     private func handlePanBegan(point: CGFloat) {
