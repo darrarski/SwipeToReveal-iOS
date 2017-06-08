@@ -8,7 +8,7 @@ Customizable swipe-to-reveal menu for iOS apps.
 
 ![SwipeToReveal screenshot 1](Misc/SwipeToReveal-screenshot1.gif "SwipeToReveal screenshot 1")
 
-## Instalation
+## Installation
 
 You can integrate `SwipeToReveal` with your project using CocoaPods. Just add this line to your `Podfile`:
 
