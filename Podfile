@@ -16,6 +16,7 @@ target 'SwipeToRevealExampleTests' do
   pod 'Quick', '~> 1.1'
   pod 'Nimble', '~> 7.0'
   pod 'FBSnapshotTestCase', '~> 2.1'
+  pod 'Nimble-Snapshots', '~> 6.2'
 end
 
 target 'SwipeToRevealTests' do
