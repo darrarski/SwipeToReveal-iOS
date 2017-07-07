@@ -23,7 +23,7 @@ PODS:
     - SnapKit (~> 3.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1)
+  - FBSnapshotTestCase (from `git@github.com:facebook/ios-snapshot-test-case.git`, commit `d9ec82b`)
   - Nimble (~> 7.0)
   - Nimble-Snapshots (~> 6.2)
   - Quick (~> 1.1)
@@ -34,8 +34,16 @@ DEPENDENCIES:
   - SwipeToReveal (from `.`)
 
 EXTERNAL SOURCES:
+  FBSnapshotTestCase:
+    :commit: d9ec82b
+    :git: git@github.com:facebook/ios-snapshot-test-case.git
   SwipeToReveal:
     :path: "."
+
+CHECKOUT OPTIONS:
+  FBSnapshotTestCase:
+    :commit: d9ec82b
+    :git: git@github.com:facebook/ios-snapshot-test-case.git
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
@@ -48,6 +56,6 @@ SPEC CHECKSUMS:
   SwiftLint: f60095dc173a3f3ec505bb34f5229c3dfd779a54
   SwipeToReveal: 363d2a93389dcfe558fb3839fa1a90960c18261f
 
-PODFILE CHECKSUM: f119154f9b53926a472c48e3f15637191d27ad78
+PODFILE CHECKSUM: b6100151a8e6f5fd5c8819a0245d0902689bafba
 
 COCOAPODS: 1.2.1
