@@ -1,6 +1,8 @@
 import Quick
 import Nimble
+import Nimble_Snapshots
 @testable import SwipeToRevealExample
+import UIKit
 
 class TableExampleCellSpec: QuickSpec {
 
@@ -26,6 +28,17 @@ class TableExampleCellSpec: QuickSpec {
 
                 it("should clear label text") {
                     expect(sut.label.text).to(beNil())
+                }
+            }
+
+            context("setup") {
+                beforeEach {
+                    sut.frame = CGRect(x: 0, y: 0, width: 320, height: 88)
+                    sut.label.text = "Snapshot Test"
+                }
+
+                it("should have valid snapshot") {
+                    expect(sut).to(haveValidSnapshot())
                 }
             }
         }
